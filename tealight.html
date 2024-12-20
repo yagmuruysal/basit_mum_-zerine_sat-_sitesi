@@ -1,0 +1,364 @@
+<!--YÜZEN MUMLAR-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>tealight mumlar </title>
+    <style>
+        * {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: 0.2s ease;
+        }
+
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+            scroll-padding-top: 9rem;
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            background-color: rgb(236, 246, 249);
+        }
+
+        .header {
+            background: rgb(238, 174, 202);
+            background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgb(251, 150, 78) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 7%;
+            border-radius: 30rem;
+            border-bottom: #afc4cf;
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .header .logo img {
+            height: 6rem;
+        }
+
+        .header .navbar {
+            display: flex;
+            align-items: center;
+        }
+
+        .header .navbar a {
+            margin: 0 1rem;
+            font-size: 1.6rem;
+            color: #1476ab;
+            border-bottom: 0.1rem solid transparent;
+        }
+
+        .header .navbar .active,
+        .header .navbar a:hover {
+            border-color: rgb(120, 117, 205);
+            padding-bottom: 0.5rem;
+        }
+
+        .header .icons div {
+            color: #1476ab;
+            cursor: pointer;
+            font-size: 2rem;
+            margin-left: 2rem;
+            background-color: transparent;
+        }
+
+        .header .icons div:hover {
+            color: #f3f6f3;
+        }
+
+        #menu-btn {
+            display: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .c {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin-top: 40px;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+        }
+
+        .candle {
+            position: relative;
+            display: inline-block;
+            margin: 20px;
+        }
+
+        .candle-img {
+            display: block;
+            width: 300px;
+            height: 200px;
+            margin: 20px;
+        }
+
+        .header .icons {
+            position: relative;
+        }
+
+        .header .icons span {
+            display: flex;
+            background-color: red;
+            width: 15px;
+            height: 15px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+            position: absolute;
+            top: 50%;
+            right: -11px;
+        }
+
+        @media (max-width: 991px) {
+            html {
+                font-size: 55%;
+            }
+
+            .header {
+                padding: 1.5rem 2rem;
+            }
+
+            .header .logo img {
+                height: 7rem;
+            }
+
+
+        }
+
+        @media (max-width:819px) {
+            .header .navbar {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 4rem;
+                right: 0;
+                width: 30rem;
+                height: calc(100vh -9rem);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                background-color: #fff;
+                padding: 1rem;
+
+            }
+
+            .header .navbar.active {
+                display: flex;
+                margin-top: 40px;
+                border-radius: 50px;
+            }
+
+            #menu-btn {
+                display: inline-block;
+            }
+
+            .header .icons span {
+                right: 24px;
+            }
+        }
+
+        .buton {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 2px;
+            font-size: 16px;
+            background-color: darkorange;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-left: 6.6rem;
+        }
+
+        .buton:hover {
+            background-color: #85401d;
+        }
+
+        .buton p {
+            margin: 0;
+            padding-left: 2rem;
+            margin-left: 2rem;
+            font-size: 18px;
+            background-color: #f6f4f1;
+            color: #e78931;
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #120f0f;
+            color: #fbf9f9;
+            text-align: center;
+            padding: 5px 0;
+            width: 100%;
+            position: relative;
+
+        }
+
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px;
+            background-color: #c1ecdc;
+            width: 100%;
+            border-top: 1px solid #b02a2a;
+            /* Footer'ı en alta yapıştırmak için */
+            margin-top: auto;
+        }
+
+        .footer-logo {
+            display: flex;
+        }
+
+        .footer-logo img {
+            max-width: 7rem;
+            height: auto;
+            border-radius: 10px;
+            margin-left: 20px;
+        }
+
+        .footer-section {
+            flex: 3;
+            margin: 40px;
+            text-align: center;
+        }
+
+        .footer-section div {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .footer-section div a {
+            text-decoration: none;
+            display: inline-flex;
+
+        }
+
+
+        @media (max-width: 768px) {
+            .footer {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-section {
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .search_main {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="header"></div>
+    <main>
+        <div class="c">
+            <div class="candle">
+                <a href="ürün.html"><img src="images/uzaktaki.png.jpg" alt="Mum" target="_blank" class="candle-img"></a>
+                <div class="flame"></div>
+                <a href="sepeteEkleme.html">
+                    <button class="buton"> SEPETE EKLE
+                        <p>99.90 TL</p>
+                    </button>
+                </a>
+            </div>
+            <div class="candle">
+                <a href="ürün.html"><img src="images/mum2...png" alt="Mum" target="_blank" class="candle-img"></a>
+                <div class="flame"></div>
+                <a href="sepeteEkleme.html" class="a">
+                    <button class="buton"> SEPETE EKLE
+                        <p>99.90 TL</p>
+
+                    </button>
+                </a>
+
+
+            </div>
+            <div class="candle">
+                <a href="ürün.html"><img src="images/uzaktaki.png.jpg" alt="Mum" target="_blank" class="candle-img"></a>
+                <div class="flame"></div>
+                <a href="sepeteEkleme.html">
+
+                    <button class="buton"> SEPETE EKLE
+                        <p>99.90 TL</p>
+                    </button>
+
+                </a>
+            </div>
+            <div class="candle">
+                <a href="ürün.html"><img src="images/uzaktaki.png.jpg" alt="Mum" target="_blank" class="candle-img"></a>
+                <div class="flame"></div>
+                <a href="sepeteEkleme.html">
+                    <button class="buton"> SEPETE EKLE
+                        <p>99.90 TL</p>
+
+                    </button>
+                </a>
+            </div>
+            <div class="candle">
+                <a href="ürün.html"><img src="images/foto.png.jpg" alt="Mum" target="_blank" class="candle-img"></a>
+                <div class="flame"></div>
+                <a href="sepeteEkleme.html">
+                    <button class="buton"> SEPETE EKLE
+                        <p>99.90 TL</p>
+
+                    </button>
+                </a>
+            </div>
+            <div class="candle">
+                <a href="ürün.html"><img src="images/uzaktaki.png.jpg" alt="Mum" target="_blank" class="candle-img"></a>
+                <div class="flame"> </div>
+                <a href="sepeteEkleme.html" class="b">
+                    <button class="buton"> SEPETE EKLE
+                        <p>99.90 TL</p>
+                    </button>
+                </a>
+            </div>
+
+
+
+        </div>
+
+    </main>
+    <div id="footer"></div>
+
+
+
+    <script src="loadContent.js"></script>
+
+</body>
+
+</html>

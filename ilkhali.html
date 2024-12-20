@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Başlık - Web Siteniz</title>
+  <style>
+    /* Genel Stil Ayarları */
+    * {
+      box-sizing: border-box;
+
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: rgb(236, 247, 247);
+      background: linear-gradient(0deg, rgba(236, 247, 247, 1) 100%, rgba(253, 187, 45, 1) 100%);
+      overflow-x: hidden;
+    }
+
+    /* Header Stili */
+    header {
+      background: rgb(238, 174, 202);
+      background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+      color: #fff;
+      padding: 10px 20px;
+
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 50px;
+      /* Logo yüksekliği */
+      margin-right: 15px;
+      /* Logo ve başlık arasındaki boşluk */
+    }
+
+    .logo h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+      /* Menü öğeleri arasındaki boşluk */
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Ana İçerik Stili */
+    main {
+      padding: 20px;
+      margin-bottom: 50px;
+      /* Footer ile içerik arasına boşluk ekler */
+    }
+
+    section {
+      margin-bottom: 20px;
+    }
+
+    form {
+      /*????????*/
+      max-width: 600px;
+      margin-top: 20px;
+    }
+
+    form label {
+      /*????????*/
+      display: block;
+      margin-top: 10px;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+    }
+
+    form button {
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #555;
+    }
+
+    /* Footer Stili */
+    footer {
+      background-color: #120f0f;
+      color: #fbf9f9;
+      text-align: center;
+      padding: 5px 0;
+      width: 100%;
+      position: relative;
+
+
+    }
+
+    .home img {
+      height: 200px;
+      width: 200px;
+
+      display: inline-block;
+      margin-right: 20px;
+
+    }
+
+    .home {
+      font-size: 0;
+      /* Resimlerin arasındaki boşluğu kaldırır */
+    }
+
+    .c {
+
+      display: flex;
+      position: relative;
+      display: inline-block;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin-top: 40px;
+      text-align: center;
+
+    }
+
+    .candle {
+      position: relative;
+      display: inline-block;
+
+    }
+
+    .candle-img {
+      display: block;
+      width: 300px;
+      height: 200px;
+      /* Mumun genişliği */
+      /* display: flex;
+      justify-content: space-between; */
+      margin: 15px;
+
+    }
+
+    .flame {
+      position: absolute;
+      top: 6%;
+      left: 50%;
+      transform: translateX(-50%);
+      right: 90px;
+      height: 65px;
+      background-image: url('https://media1.giphy.com/media/RHcV7KpWUtEAg/200w.webp?cid=ecf05e479cpky6qzsnm9seumcflm3g4ycfg9k8yqavxt8uuc&ep=v1_gifs_related&rid=200w.webp&ct=g');
+      background-size: cover;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .candle:hover .flame {
+      opacity: 1;
+      animation: flame-animation 1s infinite;
+    }
+
+    @keyframes flame-animation {
+      0% {
+        transform: translateX(-50%) translateY(-10%) scale(1);
+        /*flaş*/
+      }
+
+      50% {
+        transform: translateX(-50%) translateY(-20%) scale(1.1);
+        /*uyarı*/
+      }
+
+      100% {
+        transform: translateX(-50%) translateY(-10%) scale(1);
+        /*zoom*/
+      }
+    }
+
+    .footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px;
+      background-color: #c1ecdc;
+      width: 100%;
+      border-top: 1px solid #b02a2a;
+      /* Footer'ı en alta yapıştırmak için */
+    }
+
+    /* Logo stili */
+    .footer-logo {
+      flex: 1;
+    }
+
+    .footer-logo img {
+      max-width: 150px;
+      /* Logo boyutu */
+      height: auto;
+      border-radius: 10px;
+      margin-left: 20px;
+    }
+
+    /* Footer bölümleri */
+    .footer-section {
+      flex: 3;
+      margin: 10px;
+      text-align: center;
+    }
+
+    .footer-section div {
+      display: inline;
+      margin: 0 10px;
+    }
+
+    .footer-section div a {
+      text-decoration: none;
+      display: inline-flex;
+    }
+
+    /* Ekran küçüldüğünde responsive düzenleme */
+    @media (max-width: 768px) {
+      .footer {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-section {
+        margin: 10px 0;
+        text-align: center;
+      }
+
+      .search_main {
+        display: none;
+
+      }
+
+    }
+
+    .search_main {
+      display: flex;
+      /*yan yana aldı*/
+      justify-items: center;
+      /*dikeyde ort*/
+      align-items: center;
+      /*yatayda ortalar */
+      margin-left: 50%;
+
+
+
+    }
+
+    .btn_search {
+      margin-left: 5%;
+    }
+  </style>
+</head>
+<header>
+  </body>
+  <div class="header-container">
+
+
+    <div class="logo">
+      <img src="yakın.png.jpg" alt="Site Logosu">
+      <h1>Candle Crush</h1>
+
+      <div class="search_main">
+        <input type="text" class="search">
+        <a class="btn_search">
+          <i class="fa fa-search"></i>
+        </a>
+      </div>
+      <!-- <iframe frameborder="0" scrolling="no" src="https://freesound.org/embed/sound/iframe/316912/simple/large/"
+          width="920" height="245"></iframe> -->
+    </div>
+    <nav>
+      <ul>
+        <li><a href="ürünler.html">Ürünler</a></li>
+        <li><a href="hakkında.html">Hakkımızda</a></li>
+        <li><a href="#services">Hizmetler</a></li>
+        <li><a href="#contact">İletişim</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="c">
+    <div class="candle">
+      <img src="foto.png.jpg" alt="Mum" class="candle-img">
+      <div class="flame"></div>
+    </div>
+    <div class="candle">
+      <img src="foto.png.jpg" alt="Mum" class="candle-img">
+      <div class="flame"></div>
+    </div>
+    <div class="candle">
+      <img src="mum2...png" alt="Mum" class="candle-img">
+      <div class="flame"></div>
+    </div>
+    <div class="candle">
+      <img src="foto.png.jpg" alt="Mum" class="candle-img">
+      <div class="flame"></div>
+    </div>
+    <div class="candle">
+      <img src="mum2...png" alt="Mum" class="candle-img">
+      <div class="flame"></div>
+    </div>
+    <div class="candle">
+      <img src="foto.png.jpg" alt="Mum" class="candle-img">
+      <div class="flame"></div>
+    </div>
+    <div class="candle">
+      <img src="foto.png.jpg" alt="Mum" class="candle-img">
+      <div class="flame"></div>
+    </div>
+    <div class="candle">
+      <img src="mum2...png" alt="Mum" class="candle-img">
+      <div class="flame"></div>
+    </div>
+  </div>
+  </div>
+</main>
+<footer class="footer"> <!--masa-->
+
+  <div class="footer-logo"> <!--masanın başka bişeyi  - bu resim-->
+    <img src="yakın.png.jpg" alt="Logo">
+  </div>
+  <div class="footer-section"> <!--sandalye  -  bu yazı-->
+    <h3>Hakkımızda</h3>
+    <p>Şirket hakkında bilgi...</p>
+  </div>
+  <div class="footer-section"> <!--sandalye   - bu da yazı-->
+
+    <div class="sayfa">
+      <p>
+      <h3> Bize Ulaşın</h3>
+      </p>
+      <p> Mah. <br> Cad. No Üsküdar – Türkiye
+      </p>
+      <p>
+        +90 (216) 474 5661</p>
+      <p>candlecrush@gmail.com</p>
+    </div>
+    <div class="adres">
+      <i class="fa-solid fa-location-dot"></i>
+    </div>
+    <div class="telefon">
+      <i class="fa-solid fa-phone"></i>
+    </div>
+    <div class="mail">
+      <i class="fa-regular fa-envelope"></i>
+    </div>
+  </div>
+  <div class="footer-section"> <!--sandalye  - bu da yazı-->
+    <h3>Sosyal Medya</h3>
+    <p>Sosyal medya hesaplarımıza buradan ulaşabilirsiniz.</p>
+    <div class="whatsapp">
+      <a href="404"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+    <div class="twitter">
+      <a href="https://x.com/dostziraat"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+    <div class="instagram">
+      <a href="https://www.instagram.com/dostziraat/"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    <div class="linkedin">
+      <a href="https://www.linkedin.com/company/dostziraat/ " target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+  </div>
+</footer>
+
+<footer>
+  <p>&copy; 2024 Web Siteniz. Tüm Hakları Saklıdır.</p>
+</footer>
+</body>
+
+</html>
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Sound Example</title>
+  <style>
+    .menu-item {
+      font-size: 20px;
+      color: #333;
+      cursor: pointer;
+      padding: 10px;
+      border: 1px solid #ddd;
+      margin: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .menu-item:hover {
+      background-color: #007BFF;
+      color: white;
+    }
+  </style>
+</head>
+ 
+<body>
+  <div class="menu-item" id="home" data-sound="">Ana Sayfa</div>
+  <div class="menu-item" id="about" data-sound="data:audio/mp3;base64,//uQxAAABAAAA...">Hakkımızda</div>
+  <div class="menu-item" id="services" data-sound="data:audio/mp3;base64,//uQxAAABAAAA...">Hizmetler</div>
+  <div class="menu-item" id="contact" data-sound="data:audio/mp3;base64,//uQxAAABAAAA...">İletişim</div>
+
+ // Audio element for notes 
+  <audio id="note-player" preload="auto"></audio>
+
+  <script>
+    // Get the audio player element
+    const audioPlayer = document.getElementById('note-player');
+
+    // Function to play the sound associated with the hovered element
+    function playSound(event) {
+      // Get the sound file from the data attribute
+      const soundFile = event.target.getAttribute('data-sound');
+
+      // Set the audio source and play the sound
+      audioPlayer.src = soundFile;
+      audioPlayer.play();
+    }
+
+    // Attach mouseover event to each menu item
+    document.querySelectorAll('.menu-item').forEach(item => {
+      item.addEventListener('mouseover', playSound);
+    });
+  </script>
+</body>
+
+</html> -->

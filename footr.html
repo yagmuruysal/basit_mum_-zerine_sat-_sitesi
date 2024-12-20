@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Başlık - Web Siteniz</title>
+    <style>
+        /* Genel Stil Ayarları */
+        * {
+            box-sizing: border-box;
+
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: rgb(236, 247, 247);
+            background: linear-gradient(0deg, rgba(236, 247, 247, 1) 100%, rgba(253, 187, 45, 1) 100%);
+            overflow-x: hidden;
+        }
+
+        /* Header Stili */
+
+
+
+
+        /* Ana İçerik Stili */
+
+
+        /* Footer Stili */
+        footer {
+            background-color: #120f0f;
+            color: #fbf9f9;
+            text-align: center;
+            padding: 5px 0;
+            width: 100%;
+            position: relative;
+
+
+        }
+
+
+
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px;
+            background-color: #c1ecdc;
+            width: 100%;
+            border-top: 1px solid #b02a2a;
+            /* Footer'ı en alta yapıştırmak için */
+        }
+
+        /* Logo stili */
+        .footer-logo {
+            flex: 1;
+        }
+
+        .footer-logo img {
+            max-width: 150px;
+            /* Logo boyutu */
+            height: auto;
+            border-radius: 10px;
+            margin-left: 20px;
+        }
+
+        /* Footer bölümleri */
+        .footer-section {
+            flex: 3;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .footer-section div {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .footer-section div a {
+            text-decoration: none;
+            display: inline-flex;
+        }
+
+        /* Ekran küçüldüğünde responsive düzenleme */
+        @media (max-width: 768px) {
+            .footer {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-section {
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .search_main {
+                display: none;
+
+            }
+
+        }
+    </style>
+</head>
+
+
+<footer class="footer"> <!--masa-->
+
+    <div class="footer-logo"> <!--masanın başka bişeyi  - bu resim-->
+        <img src="yakın.png.jpg" alt="Logo">
+    </div>
+    <div class="footer-section"> <!--sandalye  -  bu yazı-->
+        <h3>Hakkımızda</h3> <br>
+        <p>Şirket hakkında bilgi...</p>
+    </div>
+    <div class="footer-section"> <!--sandalye   - bu da yazı-->
+
+        <div class="sayfa">
+            <p>
+            <h3> Bize Ulaşın</h3><br>
+            </p>
+            <p> Mah. <br> Cad. No Üsküdar – Türkiye
+            </p> <br>
+            <p>
+                +90 (216) 474 5661</p>
+            <br>
+            <p>candlecrush@gmail.com</p>
+            <br>
+        </div>
+        <div class="adres">
+            <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <div class="telefon">
+            <i class="fa-solid fa-phone"></i>
+        </div>
+        <div class="mail">
+            <i class="fa-regular fa-envelope"></i>
+        </div>
+    </div>
+    <div class="footer-section"> <!--sandalye  - bu da yazı-->
+        <h3>Sosyal Medya</h3> <br>
+        <p>Sosyal medya hesaplarımıza buradan ulaşabilirsiniz.</p>
+        <br>
+        <div class="whatsapp">
+            <a href="404"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <div class="twitter">
+            <a href="https://x.com/dostziraat"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+        <div class="instagram">
+            <a href="https://www.instagram.com/dostziraat/"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="linkedin">
+            <a href="https://www.linkedin.com/company/dostziraat/ " target="_blank"><i
+                    class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </div>
+</footer>
+
+<footer>
+    <p>&copy; 2024 Web Siteniz. Tüm Hakları Saklıdır.</p>
+</footer>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+<!-- 
+.form-container {
+    max-width: 700px;
+    margin: 0;
+    padding: 5rem;
+
+}
+
+.form-container h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px 0;
+    border-bottom-style: ridge;
+    border-bottom-color: gainsboro;
+}
+
+.grup {
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: #120f0f;
+
+}
+
+.grup label {
+    display: block;
+    margin-bottom: 5px;
+
+}
+
+.grup input,
+.grup textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    display: block;
+}
+
+.grup textarea {
+    height: 150px;
+}
+
+.submit-btn {
+
+    background-color: #1d9421;
+    color: rgb(85, 7, 7);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block;
+    width: auto;
+    border-radius: 30px;
+    /* Butonun genişliğini içeriğe göre ayarlar */
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+.harita iframe {
+    margin-top: 8rem;
+    width: 100rem;
+    height: 40rem;
+
+
+} -->
+
+
+<!-- 
+
+<main>
+    <div class="form-container">
+
+        <h1>İletişime geçin</h1>
+        <form action="/submit-form" method="post"></form>
+        <div class="grup">
+            <label for="ad">
+                <h2>Adınız Soyadınız</h2>
+            </label>
+            <input type="text" id="first-name" name="first_name" placeholder="Adınız Soyadınız">
+
+        </div>
+        <div class="grup">
+            <label for="ad">
+                <h2>
+                    E-mail
+                </h2>
+            </label>
+            <input type="text" class="field" placeholder="e mail">
+            <div class="grup">
+                <label for="ad">
+                    <h2>Telefon</h2>
+                </label>
+                <input type="text" class="field" placeholder="telefon">
+
+            </div>
+
+        </div>
+        <div class="grup">
+            <label for="ad">
+                <h2>Telefon</h2>
+            </label>
+            <input type="text" class="field" placeholder="telefon">
+
+        </div>
+        <div class="grup">
+            <label for="ad">
+                <h2>Mesaj</h2>
+            </label>
+            <textarea class="field" placeholder="mesajınız"></textarea>
+
+        </div>
+        <div class="submit-btn">
+            <button type="submit" class="submit-btn">Gönder</button>
+        </div>
+        <div class="harita">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12088.149526589787!2d29.839852861712465!3d40.76120254217621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cb17e87e4ef979%3A0x5ae756907ea38062!
+                2zw4dlbmVzdXl1IEthxZ_EsWsgVGVzaXNsZXJp!5e0!3m2!1str!2str!4v1723708609437!5m2!1str!2str"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+
+
+
+    </div>
+
+
+    </div>
+
+
+</main> -->

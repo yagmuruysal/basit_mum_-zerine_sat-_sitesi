@@ -1,0 +1,192 @@
+<!--footer ve header kısmı -->
+<!--YÜZEN MUMLAR-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>iletişim</title>
+    <style>
+        .form-container {
+            max-width: 700px;
+            margin: 0;
+            padding: 5rem;
+
+        }
+
+        .form-container h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 15px 0;
+            border-bottom-style: ridge;
+            border-bottom-color: gainsboro;
+        }
+
+        .grup {
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: #120f0f;
+
+        }
+
+        .grup label {
+            display: block;
+            margin-bottom: 5px;
+
+        }
+
+        .grup input,
+        .grup textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            display: block;
+        }
+
+        .grup textarea {
+            height: 150px;
+        }
+
+        .submit-btn {
+
+            background-color: #1d9421;
+            color: rgb(85, 7, 7);
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            display: block;
+            width: auto;
+            border-radius: 30px;
+            /* Butonun genişliğini içeriğe göre ayarlar */
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        .harita iframe {
+            margin-top: 8rem;
+            width: 100rem;
+            height: 40rem;
+
+
+        }
+
+        @media (max-width: 600px) {
+            .harita iframe {
+                display: flex;
+                margin-top: 0;
+                width: 40rem;
+                margin-top: 8rem;
+
+            }
+        }
+
+        @media (max-width: 400px) {
+            .harita iframe {
+                display: flex;
+                margin-top: 0;
+                width: 30rem;
+                margin-top: 8rem;
+
+            }
+        }
+
+        @media (max-width: 991px) {
+
+
+            section {
+                padding: 2rem;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header"></div>
+    <main>
+
+        <main>
+            <div class="form-container">
+
+                <h1>İletişime geçin</h1>
+                <form action="/submit-form" method="post"></form>
+                <div class="grup">
+                    <label for="ad">
+                        <h2>Adınız Soyadınız</h2>
+                    </label>
+                    <input type="text" id="first-name" name="first_name" placeholder="Adınız Soyadınız">
+
+                </div>
+                <div class="grup">
+                    <label for="ad">
+                        <h2>
+                            E-mail
+                        </h2>
+                    </label>
+                    <input type="text" class="field" placeholder="e mail">
+                    <div class="grup">
+                        <label for="ad">
+                            <h2>Telefon</h2>
+                        </label>
+                        <input type="text" class="field" placeholder="telefon">
+
+                    </div>
+
+                </div>
+                <div class="grup">
+                    <label for="ad">
+                        <h2>Telefon</h2>
+                    </label>
+                    <input type="text" class="field" placeholder="telefon">
+
+                </div>
+                <div class="grup">
+                    <label for="ad">
+                        <h2>Mesaj</h2>
+                    </label>
+                    <textarea class="field" placeholder="mesajınız"></textarea>
+
+                </div>
+                <div class="submit-btn">
+                    <button type="submit" class="submit-btn">Gönder</button>
+                </div>
+                <div class="harita">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12088.149526589787!2d29.839852861712465!3d40.76120254217621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cb17e87e4ef979%3A0x5ae756907ea38062!
+                2zw4dlbmVzdXl1IEthxZ_EsWsgVGVzaXNsZXJp!5e0!3m2!1str!2str!4v1723708609437!5m2!1str!2str"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+            </div>
+            </div>
+        </main>
+        <script src="loadContent.js"></script>
+
+    </main>
+    <div id="footer"></div>
+</body>
+
+</html>
+<!-- 
+
+        // const searchForm = document.querySelector(".search-form");
+        // const cartItem = document.querySelector("#cart-items-container");
+        // const search
+        // searchBtn.addEventListener("click", function () {
+        //     searchForm.classList.add("active");
+        //     document.addEventListener("click", function (e) {
+        //         if (
+        //             !e.composedPath().includes(searchBtn) &&
+        //             !e.composedPath().includes(searchBtn)
+        //         ) {
+        //             searchForm.classList.remove("acitve");
+
+        //         }
+        //     })
+        //}) -->

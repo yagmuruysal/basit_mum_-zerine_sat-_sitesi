@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            text-align: justify;
+            left: 5%;
+
+        }
+
+        .kutular {
+            display: flex;
+            justify-content: center;
+            margin-top: 5rem;
+
+        }
+
+        .kutu1 {
+            width: 700px;
+            height: 500px;
+            padding: 20px;
+            background-color: rgb(236, 246, 249);
+            position: relative;
+            display: inline-block;
+            display: flex;
+            justify-content: center;
+        }
+
+        .kutu2 {
+            width: 600px;
+            height: 500px;
+            padding: 20px;
+            background-color: rgb(236, 246, 249);
+            position: relative;
+            display: inline-block;
+            display: flex;
+            justify-content: center;
+        }
+
+        .alan {
+            margin-top: 5rem;
+            font-size: large;
+        }
+
+        .alan p {
+            margin-bottom: 2rem;
+            margin-top: 3px;
+            justify-content: center;
+        }
+
+        .alan h2 {
+            justify-content: center;
+            margin-left: rem;
+        }
+
+        .kutu2 {
+            display: block;
+
+
+        }
+
+        .kutu2 h2 {
+            margin-bottom: 18px;
+        }
+
+        .kutu2 .rakam {
+            color: rgb(232, 156, 13);
+        }
+
+        .kutu2 button {
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            margin-top: 8rem;
+            border-radius: 10px;
+            background-color: rgb(185, 76, 36);
+            color: aliceblue;
+        }
+
+        .ürün {
+            margin-top: 5rem;
+        }
+
+        .kutu2 button a {
+            color: aliceblue;
+
+        }
+
+        @media (min-width:1445px) {
+            .başlık p {
+                margin-left: 70px;
+
+            }
+
+            .başlık h2 {
+                margin-left: 70px;
+
+            }
+
+            .section {
+                margin-left: 70px;
+            }
+
+            .ürün {
+                margin-left: 70px;
+
+            }
+        }
+
+        @media (max-width:747px) {
+            .kutular {
+
+                display: flex;
+                flex-wrap: wrap;
+
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="header"></div>
+    <main>
+        <div class="alan">
+            <div class="başlık">
+                <p>Anasayfa / Mumlar / Tea Light Mum</p>
+                <h2>12 LI 30Gr tealight mum</h2>
+            </div>
+            <div class="kutular">
+
+                <div class="kutu1">
+                    <img src="images/uzaktaki.png.jpg">
+                </div>
+                <div class="kutu2">
+                    <div>
+                        <h2>12 LI 30Gr tealight mum</h2>
+                    </div>
+
+                    <div>
+                        <p>Marka:Candle Crush</p>
+                        <p> Ürün Kodu : 5286</p>
+                    </div>
+                    <div class="rakam">
+                        <h1>99.90 TL</h1>
+                    </div>
+                    <div>
+                        <button>
+                            <a href="sepeteEkleme.html">
+                                <p>sepete Ekle</p>
+                            </a>
+                        </button>
+                    </div>
+                    <div>
+                        <button>
+                            <a href="#urun-ozellikleri">Ürün Özelliklerini Gör</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="ürün">
+                <div id="urun-ozellikleri">
+                    <h2>Ürün Özellikleri</h2>
+                    <p>50 Li ( 13 gr ) Kırmızı Tealight Mum </p>
+
+                    <p>Renk : Turuncu ( 13 Gr )</p>
+
+                    <p>Yanma Süresi : 3.5 ila 4 + Saat</p>
+
+                    <p>Paket İçeriği : 50 Adet Tea Light Mum Gönderilmektedir.</p>
+
+
+                    <p>Ek Bilgiler:
+
+                        Yanan bir mumun durumunu belirli aralıklarla kontrol edin.
+                        Mumları yanıcı maddelerin yakınlarına koymayın.</p>
+                    <!-- Diğer özellikler... -->
+                </div>
+            </div>
+
+    </main>
+
+    <script src="loadContent.js"></script>
+    <div id="footer"></div>
+
+</body>
+
+</html>
